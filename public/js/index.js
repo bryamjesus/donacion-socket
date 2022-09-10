@@ -28,10 +28,11 @@ socket.on("historico", (datos) => {
   for (donante of datos.donantes) {
     lista.innerHTML += `<li>${donante}</li>`;
   }
+  total.innerHTML = datos.total;
 });
 
 socket.on("respuesta", (datos) => {
-  console.log(datos);
+  //console.log(datos);
   list.innerHTML += `<li>${datos.persona}</li>`;
-  total.setValue = datos.total;
+  total.innerHTML = datos.total;
 });
